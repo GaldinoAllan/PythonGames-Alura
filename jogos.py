@@ -10,6 +10,8 @@ def escolhe_jogo():
     print("(2) Adivinhação")
 
     jogo = int(input("Qual jogo? "))
+    
+    switch(jogo)
 
     if jogo == 1:
         print("Jogando da Forca")
@@ -17,6 +19,6 @@ def escolhe_jogo():
     elif jogo == 2:
         print("Jogando Adivinhação")
         adivinhacao.jogar()
-
+    
 if __name__ == "__main__":
     escolhe_jogo()

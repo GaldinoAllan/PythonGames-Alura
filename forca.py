@@ -1,4 +1,6 @@
 import random
+import jogos
+import os
 
 def jogar():
 
@@ -30,7 +32,17 @@ def jogar():
         imprime_mensagem_vencedor()
     else:
         imprime_mensagem_perdedor(palavra_secreta)
+        
+    jogar_novamente()
 
+def jogar_novamente():
+    resposta = input("Jogar novamente? (sim/nao)")
+    if resposta == "sim":
+        os.system('cls' if os.name == 'nt' else 'clear')
+        jogar()
+    else:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        jogos.escolhe_jogo()
 
 
 def desenha_forca(erros):

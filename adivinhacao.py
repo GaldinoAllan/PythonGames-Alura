@@ -1,4 +1,6 @@
 import random
+import jogos
+import os
 
 def jogar():
 
@@ -10,7 +12,7 @@ def jogar():
     total_de_tentativas = 0
     pontos = 1000
 
-    print("Qual o nivel de dificuldade?", numero_secreto)
+    print("Qual o nivel de dificuldade?")
     print("(1) Fácil")
     print("(2) Médio")
     print("(3) Difícil")
@@ -50,6 +52,16 @@ def jogar():
             pontos -= pontos_perdidos
 
     print("Fim do jogo!")
+    jogar_novamente()
+
+def jogar_novamente():
+    resposta = input("Jogar novamente? (sim/nao)")
+    if resposta == "sim":
+        os.system('cls' if os.name == 'nt' else 'clear')
+        jogar()
+    else:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        jogos.escolhe_jogo()
 
 if __name__ == "__main__":
     jogar()
